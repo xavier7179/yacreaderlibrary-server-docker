@@ -43,7 +43,7 @@ RUN cd /     && \
     apt-get -y autoremove &&\
     rm -rf /src && \
     rm -rf /var/cache/apt \
-    ln -s /root/.local/share/YACReader/YACReaderLibrary/ /config/
+    ln -s /root/.local/share/YACReader/YACReaderLibrary/ /config
 #ADD YACReaderLibrary.ini /root/.local/share/YACReader/YACReaderLibrary/
 RUN if [ ! -f /root/.local/share/YACReader/YACReaderLibrary/YACReaderLibrary.ini ] ; then touch /root/.local/share/YACReader/YACReaderLibrary/YACReaderLibrary.ini ; fi
 

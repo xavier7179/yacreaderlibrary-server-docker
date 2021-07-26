@@ -44,9 +44,10 @@ RUN cd /     && \
     rm -rf /src && \
     rm -rf /var/cache/apt
    # ln -s /root/.local/share/YACReader/YACReaderLibrary/ /config
-#ADD YACReaderLibrary.ini /root/.local/share/YACReader/YACReaderLibrary/
+
 RUN ln -s /root/.local/share/YACReader/YACReaderLibrary/ /config
-RUN if [ ! -f /root/.local/share/YACReader/YACReaderLibrary/YACReaderLibrary.ini ] ; then touch /root/.local/share/YACReader/YACReaderLibrary/YACReaderLibrary.ini ; fi
+ADD YACReaderLibrary.ini /root/.local/share/YACReader/YACReaderLibrary/
+#RUN if [ ! -f /root/.local/share/YACReader/YACReaderLibrary/YACReaderLibrary.ini ] ; then touch /root/.local/share/YACReader/YACReaderLibrary/YACReaderLibrary.ini ; fi
 
 # add specific volumes: configuration, comics repository, and hidden library data to separate them
 VOLUME ["/comics", "/config"]

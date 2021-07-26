@@ -8,12 +8,12 @@ RUN apt-get update && \
     apt-get -y install qt5-image-formats-plugins p7zip-full git dumb-init qt5-default libpoppler-qt5-dev libpoppler-qt5-1 wget unzip libqt5sql5-sqlite libqt5sql5 sqlite3 libqt5network5 libqt5gui5 libqt5core5a build-essential cmake zlib1g-dev liblzma-dev libbz2-dev
 RUN git clone https://github.com/YACReader/yacreader.git . && \
     git checkout 9.8.2
-RUN cd compressed_archive/unarr/ && \
-    wget github.com/selmf/unarr/archive/master.zip &&\
-    unzip master.zip  &&\
-    rm master.zip &&\
-    cd unarr-master/lzmasdk &&\
-    ln -s 7zTypes.h Types.h
+#RUN cd compressed_archive/unarr/ && \
+#    wget github.com/selmf/unarr/archive/master.zip &&\
+#    unzip master.zip  &&\
+#    rm master.zip &&\
+#    cd unarr-master/lzmasdk &&\
+#    ln -s 7zTypes.h Types.h
 #RUN cd compressed_archive/ &&\
 #    git clone https://github.com/btolab/p7zip ./libp7zip
 RUN LD_LIBRARY_PATH=/usr/local/lib/ && \

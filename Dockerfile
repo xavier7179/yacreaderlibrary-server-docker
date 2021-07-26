@@ -16,8 +16,7 @@ RUN cd compressed_archive/unarr/ && \
     ln -s 7zTypes.h Types.h
 #RUN cd compressed_archive/ &&\
 #    git clone https://github.com/btolab/p7zip ./libp7zip
-RUN echo "**** install unarr libraries with 7zip support ****" && \
-    LD_LIBRARY_PATH=/usr/local/lib/ && \
+RUN LD_LIBRARY_PATH=/usr/local/lib/ && \
     export LD_LIBRARY_PATH && \
     cd /src/git/ && \
     git clone https://github.com/selmf/unarr && \
